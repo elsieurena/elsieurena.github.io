@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: lightsteelblue;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: lightsteelblue;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: aliceblue;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+.card2{
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: aliceblue;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 38%;
+  position: relative;
+  top: -17px;
+
+}
+.smalls{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  position: relative;
+  top: 5px;
+}
+.right{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  position: relative;
+  top: -270px;
+  float:right;
+  left:-20px;
+}
+.lyric{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  position: relative;
+  top: -250px; 
+}
+</style>
+</head>
+<body>
+      <div class="header">
+  <h1>Welcome to my Website</h1>
+  <p>Below is the current Word Cloud project I have been working on.</p>
+</div>
+    <nav>
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="Programs.html">Programs</a>
+  <a href="Information.html">Information</a>
+  <a href="Contact.html" style="float:right">Contact</a>
+</div>
+    </nav>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>LOST IN LOVE</h2>
+      <h5>By Air Supply</h5>
+      <div class="fakeimg" style="height:300px;">
+          <img src="images/wordcloud.png" alt=" Word Cloud" class="center">
+      </div>
+      <p>Word cloud image</p>
+     <p><a href="https://www.azlyrics.com/lyrics/airsupply/lostinlove.html
+">Lyrics from azlyrics</a></p> </div>
+
+<div class="card">
+    <p>
+    The first step was to use a HashMap the code would count the number 
+    of times a different word appears in the song. In the end it printed 
+    out a word frequency list. In order to get an accurate reading we 
+    had to make the keys case sensitive so that we received an accurate 
+    reading of the word so that the word was not repeated.
+    </p>
+     <p>
+    The second step was to make a data visualization which would be the image 
+    above. In second part we had to generate an image from the word frequency 
+    list we received from step one. We used an open source library to create 
+    the data visualization, the open source library we used  was Kumo library.
+    Below is a helpful link with examples:
+    </p>
+    <p>
+        <a href=" https://github.com/kennycason/kumo ">KennyCason's use of the 
+            Kumo Library</a> 
+    </p>
+    </div>
+    <div class="card">
+      <h2>About the Data Structure used</h2>
+      <h5>April 5, 2019</h5>
+      
+      <p> The data structure that was used for this assignment was a HashMap. 
+        A HashMap stores the data in (Key, Value) pairs. To access a value one 
+        must know its key. HashMap is known as HashMap because it uses a 
+        technique called Hashing. Hashing is a technique of converting a 
+        large String to small String that represents the same String. A shorter 
+        value helps in indexing and faster searches. HashSet also uses HashMap 
+        internally. It internally uses a link list to store key-value pairs 
+        already explained in HashSet in detail and further articles. 
+      </p>
+      <p> In basic terms a HashMap is a data structure that is able to map 
+          certain keys to certain values. The keys and values could be anything. 
+          For example, if I were making a game, I might link every username to 
+          a friends list, represented by a List of Strings.
+      </p>
+      <ul>
+         <li>HashMap is a part of java.util package. </li>
+         <li>HashMap extends an abstract class AbstractMap which also provides 
+             an incomplete implementation of Map interface</li>
+         <li>HashMap does not allow duplicate keys but allows duplicate values.
+             That means A single key can not contain more than 1 value but more 
+             than 1 key can contain a single value.</li>
+         <li>HashMap allows null key also but only once and multiple null 
+             values.</li>
+         <li>This class makes no guarantees as to the order of the map; in 
+             particular, it does not guarantee that the order will remain 
+             constant over time. It is roughly similar to HashTable but is 
+             unsynchronized.</li>
+      </ul>  
+      
+    </div>
+      <div class="card">
+          <h2>Why I chose the HashMap Data Structure</h2>
+      <h5>April 5, 2019</h5>
+      <p>HashMaps are much faster for retrieving data than arrays and linked 
+          lists. A sorted array could find a particular value in O(log n) with 
+          binary search. However, a HashMap can check if it contains a 
+          particular key in O(1). All keys must be unique. Which was very 
+          useful when searching for different words in a song.
+      </p>
+      <ul>
+          <li>remove: O(1)</li>
+          <li>size: O(1)</li>
+          <li>values: O(n)(on traversal through iterator)</li>
+      </ul>
+      </div>
+       <div class="card">
+      <h2>Benefits of a HashMap</h2>
+      <h5>April 5, 2019</h5>
+      <ul>
+          <li>The purpose of map is store value on the based on key that can be
+              used to retrieve item at later point.</li>
+          <li>HashMap is fail-fast iterator.( Iterator is an object that enables 
+              a programmer to traverse a container, particularly lists)</li>
+          <li>HashMap cannot be shared between multiple threads without proper 
+              synchronization.Synchronized means only one thread can modify a 
+              hash table at one point of time.</li>
+          <li>When you add items to a HashMap, you are not guaranteed to 
+              retrieve the items in the same order you put them in. There are 
+              subclasses of HashMap like LinkedHashMap that will maintain the 
+              order, but in general order is not guaranteed with a Map.</li>
+          <li>Collection functionality some great utility functions are 
+              available for lists via the Collections class</li>
+      </ul>
+       </div>
+       <div class="card">
+      <h2>Something's I would like to improve on the project</h2>
+      <h5>April 5, 2019</h5>
+    
+      <p>I would like to add more links to my website maybe make the 
+          navigation bars work if I do not make it by the time I send this. 
+          Maybe add more colors however that is an easy fix. I feel like I 
+          should have repeated the words in the song so that it had more words 
+          because it looks like the song did not have many words which it 
+          did not have. However that is an issue with the choice in music. 
+          I would also like to be able to make different shapes using 
+          Apache Maven.</p>
+       </div>
+       <div class="card">
+      <h2>How I would make my project bigger</h2>
+      <h5>April 5, 2019</h5>
+      <p>
+         I would try to create logo's using data visualizations. Or combine a 
+         bunch of data visualizations to make a bigger picture. However for 
+         the website I would try to make a lot of modifications. 
+         Add more tabs more links as well as pages.
+      </p>
+      <img src="images/PlayStationLogo.png" alt=" Play Station 
+           Logo made out of words"
+           class="smalls">
+      <a href="https://eunj.wordpress.com/2012/04/25/typographic-innovation/">
+          PlayStationLogoLink</a>
+       </div>
+      <div class="card">
+      <h2>Why I chose this song</h2>
+      <h5>April 5, 2019</h5>
+      <p>
+          I actually did not choose this song my mom did. I personally do 
+          not have a favorite song. However I wanted to choose a song that 
+          was more old fashioned and has a good beat. 
+      </p>
+      </div>
+      <div class="card">
+      <h2>Was the song a Billboard top hit?</h2>
+      <h5>April 5, 2019</h5>
+      <p>
+           Air Supply Greatest Hits Billboard Top Canadian Hits from 1980 to 
+           1986. Canadian Top 100 Singles Billboard Charts. The number before 
+           the song title indicates its peak position for that year on the 
+           Canadian Billboard.
+      </p>
+      <ul>
+          <li>4 : Lost In Love (1980) Thirteen weeks in the top 40.
+              Four weeks in the top 10.</li>
+          <li>2 : All Out Of Love (1980) Nine weeks in the top 40. 
+              Five weeks in the top 10.</li>
+          <li>31 : Every Woman In The World (1981) Three weeks in the top
+              40.</li>
+          <li>3 : The One That You Love (1981) Ten weeks in the top 40. 
+              Two weeks in the top 10.</li>
+          <li>8 : Here I Am (Just When I Thought) (1981) Ten weeks in the 
+              top 40. One week in the top 10.</li>
+          <li>14 : Sweet Dreams (1982) Twelve weeks in the top 40.</li>
+          <li>7 : Even The Nights Are Better (1982) Twelve weeks in the top 
+              40.</li>
+          <li>3 : Making Love (Out Of Nothing At All) (1983) Fourteen weeks 
+              in the top 40. Six weeks in the top 10.</li>
+          <li>14 : Just As I Am (1985) Nine weeks in the top 40.</li>
+          <li>35 : The Power Of Love (1985) Three weeks in the top 40.</li>
+          <li>83 : Lonely Is The Night (1986)</li>
+      </ul>
+      <p>
+          To simply put it the song "Lost in Love" was in the top 5. It sadly 
+          was not number 1 but it was up there. Which took place during the 
+          1980s time period. For the US billboard they were number 3.
+      </p>
+      
+      </div>
+      <div class="card" style="height:500px;">
+      <h2>The Histogram</h2>
+      <h5>April 5, 2019</h5>
+      <p>
+          As seen in the chart below the five top words were:
+      </p>
+      <ul>
+          <li>"you" which was repeated 21 times</li>
+          <li>"lost" was repeated 17 times</li>
+          <li>"in" was repeated 16 times</li>
+          <li>"love" was repeated 16 times as well</li>
+          <li>"and" was repeated  12 times</li>
+      </ul>
+      <p>
+          The top words found were not surprising since the title<br> was named 
+          "Lost In Love" and the words "you"<br> were most likely used to 
+          sing to a person as most <br>songs are for. A sentence without the word
+          "and" <br>is kind of hard to make, so as expected "and" <br>would have to be 
+          in the top 5.  
+      </p>
+      <img src="images/Histogram2.png" alt="Histogram" class="right">
+      <a href="https://www.azlyrics.com/lyrics/airsupply/lostinlove.html
+"class="lyric">Lyrics from azlyrics</a>
+      </div>
+      <div class="card" style="width:550px;">
+      <h2>The value of a word</h2>
+      <h5>April 5, 2019</h5>
+      <p style="margin:auto;">
+          The fixed rate for songwriter's is $0.91 per word, this song had 72 
+          words so the song writer would get paid $65.52. However that does not 
+          include royalties or how well the album does and the award money if 
+          they receive any. The <br>value of a word lessens depending on the 
+          position you are <br>in and level you are as a writer. 
+      </p>
+  </div>
+        <div class="card2">
+      <h2>The value of a word</h2>
+      <h5>April 5, 2019</h5>
+      <p style="margin:auto;">
+          The song sold over 3 million copies and back in the 80s the pricing 
+          for being a writer was less it was probably 50 cents per word or 
+          less. Assuming it was 50 cents per word the writer would get 10% if 
+          they wrote that song alone since the album had 10 songs. The writer 
+          would receive over $300,000 not including the $36.00 from writing the 
+          song. This also doe not include the hours they put in as well. 
+      </p>
+      </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>I am Brooklyn college student currently learning about 
+          different data structures .</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+    </body>
+</html>
